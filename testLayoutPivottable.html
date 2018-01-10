@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>透视表组件(layoutData)</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./mc-pivottable.css">
+</head>
+
+<body>
+    <div id="J_pivottable" style="width: 1800px; height: 300px;"></div>
+    <script type="text/javascript" src="./lib/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="./lib/jsrender.min.js"></script>
+    <script type="text/javascript" src="./lib/underscore.1.8.3.min.js"></script>
+    <script type="text/javascript" src="./lib/E_Base.js"></script>
+    <script type="text/javascript" src="./layoutJson.js"></script>
+    <script type="text/javascript" src="./Pivottable.js"></script>
+    <script type="text/javascript">       
+
+    /* 
+     * 组件加载
+    */        
+    var pivottable = new Pivottable();  
+
+    pivottable.init({
+        'dom': '#J_pivottable',
+        'option': {
+            'data': layoutJson,
+            'headDimNum': 2,
+        },
+    });
+
+    // pivottable.setData();
+    
+    </script>
+</body>
+
+</html>
